@@ -1,7 +1,7 @@
 {
   "expo": {
     "name": "mobile_movie_app",
-    "slug": "mobile_movie_app",
+    "slug": "mobilemovieapp",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/images/icon.png",
@@ -37,6 +37,13 @@
     ],
     "experiments": {
       "typedRoutes": true
-    }
+    },
+    "extra": {
+      "router": {},
+      "eas": {
+        "projectId": "60d7abfc-3e92-4268-a411-5fb2c3c0962d"
+      }
+    },
+    "owner": "arham.irfan4"
   }
 }
