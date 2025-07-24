@@ -18,6 +18,7 @@ export const updateSearchCount = async (query: string, movie: Movie) => {
     console.log("result:", result);
     // check if a reacord of that search has already been stored
     //if document is found, increment the search count field
+    // if no document is found => create a new document in appwrite database
     if (result.documents.length > 0) {
       const existingMovie = result.documents[0];
       await database.updateDocument(
@@ -36,7 +37,6 @@ export const updateSearchCount = async (query: string, movie: Movie) => {
         poster_url: `https://image/tmdb.org/t/p/w500${movie.poster_path}`,
       });
     }
-    // if no document is found => create a new document in appwrite database
   } catch (error) {
     console.log("🚀 ~ updateSearchCount ~ error:", error);
   }
