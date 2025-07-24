@@ -49,15 +49,16 @@ Join our community of developers creating universal apps.
 - [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
 - [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
 
-
 ## Project Setup
 
 clean project by running following:
+
 ```bash
 npm run reset-project
 ```
 
-install packages: 
+install packages:
+
 ```bash
 npm i nativewind tailwindcss react-native-reanimated react-native-safe-area-context
 npx tailwindcss init
@@ -65,13 +66,23 @@ npx expo customize metro.config.js
 ```
 
 create file nativewind-env.d.ts and add this code:
+
 ```bash
 /// <reference types="nativewind/types" />
 ```
 
-create global.css file and add the following code and include it to _layout.tsx and metro.config.js
+create global.css file and add the following code and include it to \_layout.tsx and metro.config.js
+
 ```bash
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+```
+
+-
+
+To install appwrite (optional) packages and set up from video, use this:
+
+```bash
+npx expo install react-native-appwrite react-native-url-polyfill
 ```

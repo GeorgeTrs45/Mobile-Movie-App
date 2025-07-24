@@ -7,6 +7,7 @@ import { images } from "@/constants/images";
 import MovieDisplayCard from "@/components/MovieCard";
 import SearchBar from "@/components/searchBar";
 import { fetchMovies } from "@/services/api";
+import { updateSearchCount } from "@/services/appwrite";
 import useFetch from "@/services/useFetch";
 
 const Search = () => {
@@ -26,6 +27,7 @@ const Search = () => {
 
   // Debounced search effect
   useEffect(() => {
+    updateSearchCount(searchQuery, movies[0]);
     const timeoutId = setTimeout(async () => {
       if (searchQuery.trim()) {
         await loadMovies();
